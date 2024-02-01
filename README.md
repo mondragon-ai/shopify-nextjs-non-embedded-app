@@ -42,14 +42,21 @@ Updated to Shopify API 2023-07
   - `SHOPIFY_API_KEY`: The Shopify Api key of the app, you have just created
   - `SHOPIFY_API_SECRET_KEY`: The Shopify Api secret key of the app, you have just created
   - `SCOPES`: The [access scopes](https://shopify.dev/api/usage/access-scopes) your app needs
-  - `HOST`: The Url of your app. Leave this empty for development
+  - `HOST`: The Url of your app. Leave this empty for development for now
   - `SHOP`: Your dev stores url
   - `NGROK_AUTH_TOKEN`: Your [Ngrok auth token](https://dashboard.ngrok.com/get-started/your-authtoken)
-  - `UPSTASH_REDIS_REST_URL`: Your Upstash Redis REST url.
-  - `UPSTASH_REDIS_REST_TOKEN`: Your Upstash Redis REST token.
+  - `UPSTASH_REDIS_REST_URL`: Your Upstash Redis REST URL [sign up here](https://console.upstash.com/).
+  - `UPSTASH_REDIS_REST_TOKEN`: Your Upstash Redis REST token [sign up here](https://console.upstash.com/).
+- Run `npm install`
 - Run `ngrok http 3000` in terminal and use the URL inside app setup and your .env
 - Run `npm install`
 - Run `npm run shopify app config link` to link the repo with your Shopify App in Partners Dashboard (function creates app.toml file, which is needed for your app to function)
+- Whitelist these redirects to your `.shopify.toml.file` file with the following callbacks:
+  - `https://{YOUR_APP_URL}/auth/callback`
+  - `https://{YOUR_APP_URL}/auth/shopify/callback`
+  - `https://{YOUR_APP_URL}p/api/auth/callback`
+  - `https://{YOUR_APP_URL}p/api/auth/offline`
+  - `https://{YOUR_APP_URL}p/api/auth/offline-callback`
 - Run `npm run dev`
 
 - Visit `https://{YOUR_APP_URL}/login` to install your app
