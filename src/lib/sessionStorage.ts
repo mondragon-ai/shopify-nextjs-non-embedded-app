@@ -37,6 +37,6 @@
 //     return result === 'OK';
 // }
 
-// const SessionStorage = new Shopify.Session.CustomSessionStorage(storeCallback, loadCallback, deleteCallback)
+const SessionStorage = {}; //new Shopify.Session.CustomSessionStorage(storeCallback, loadCallback, deleteCallback)
 
-// export default SessionStorage
+export default SessionStorage;

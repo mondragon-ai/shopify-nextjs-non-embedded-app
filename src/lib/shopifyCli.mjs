@@ -126,11 +126,11 @@
 // 	return url;
 // }
 
-// let cli = {};
+let cli = {};
 // cli.fetchAppFromApiKey = fetchAppFromApiKey;
 // cli.outputAppURL = outputAppURL;
 // cli.removeHttp = removeHttp;
 // cli.selectOrg = selectOrg;
 // cli.updateURLs = updateURLs;
 
-// export default cli;
+export default cli;
